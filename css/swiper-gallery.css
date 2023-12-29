@@ -1,0 +1,156 @@
+.swiper-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.swiper-slide-container {
+  height: 100%;
+  width: 100%;
+  margin: 0 0 2% 0;
+}
+
+.swiper-slide-container .info-ch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -10% 0 5% 0;
+}
+
+.swiper-slide-container .info-eud {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: -10% 10% 5% 10%;
+  gap: 10px;
+}
+
+.swiper-slide-container .info-ch .info-title-sp {
+  font-size: 10vw;
+  line-height: 1;
+  color: #fff;
+  background-color: #798951;
+  padding: 1% 2% 1.8% 2%;
+  margin: 0 3% 0 0;
+  /* 20230303 新增 start */
+  white-space: nowrap;
+}
+
+.swiper-slide-container .info-ch .info-content-sp {
+  font-size: 5vw;
+  font-weight: bold;
+  line-height: 1.3;
+  text-align: left;
+  color: #798951;
+  margin: 0;
+}
+
+.swiper-slide-container .info-eud .info-title-sp {
+  font-size: 10vw;
+  line-height: 1;
+  color: #fff;
+  background-color: #39818f;
+  padding: 1% 2% 1.8% 2%;
+  margin: 0 3% 0 0;
+}
+
+.swiper-slide-container .info-eud .info-content-sp {
+  font-size: 5vw;
+  font-weight: bold;
+  line-height: 1.3;
+  text-align: left;
+  color: #39818f;
+  margin: 0;
+}
+
+.gallery-top,
+.gallery-top2 {
+  width: 100%;
+}
+
+.gallery-thumbs {
+  height: 20%;
+  box-sizing: border-box;
+  /* 20230303 更新 start */
+  padding: 0 5% 10% 5%;
+}
+
+.gallery-thumbs2 {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 0 5% 15% 5%;
+}
+
+.gallery-thumbs .swiper-slide,
+.gallery-thumbs2 .swiper-slide {
+  filter: grayscale(100%);
+}
+
+.gallery-thumbs .swiper-slide:not(.swiper-slide-active)::before,
+.gallery-thumbs2 .swiper-slide:not(.swiper-slide-active)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45); /* 透明黑色背景 */
+  border: 0px solid rgba(0, 0, 0, 0.45);
+  border-radius: 500px;
+  z-index: 1; /* 將伪元素置於幻燈片上方 */
+}
+
+.gallery-thumbs .swiper-slide-active,
+.gallery-thumbs2 .swiper-slide-active {
+  filter: unset;
+}
+
+.mugshot-size {
+  width: 100%;
+  height: 100%;
+}
+
+/* 角色輪播 箭頭設定 */
+.swiper-button-prev3,
+.swiper-button-next3 {
+  position: absolute;
+  top: calc(50% - 7.5% / 2);
+  width: 12%;
+  height: 7.5%;
+  z-index: 70;
+  cursor: pointer;
+}
+
+.swiper-button-next3 {
+  background: url(../images/next_arr.png) no-repeat;
+  background-size: 100%;
+  right: 5%;
+}
+
+.swiper-button-prev3 {
+  background: url(../images/prev_arr.png) no-repeat;
+  background-size: 100%;
+  left: 5%;
+}
+
+/* 角色輪播 箭頭設定 */
+.swiper-button-prev4,
+.swiper-button-next4 {
+  position: absolute;
+  top: calc(50% - 7.5% / 2);
+  width: 12%;
+  height: 7.5%;
+  z-index: 70;
+  cursor: pointer;
+}
+
+.swiper-button-next4 {
+  background: url(../images/next_arr.png) no-repeat;
+  background-size: 100%;
+  right: 5%;
+}
+
+.swiper-button-prev4 {
+  background: url(../images/prev_arr.png) no-repeat;
+  background-size: 100%;
+  left: 5%;
+}

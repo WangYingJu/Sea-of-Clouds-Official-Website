@@ -1,0 +1,2215 @@
+@charset "utf-8";
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+*,
+a,
+span {
+  font-family: "Noto Sans TC", Arial, Helvetica, 微軟正黑體, Microsoft JhengHei,
+    sans-serif;
+}
+
+/*====卷軸===*/
+/* 細捲軸開始 */
+::-webkit-scrollbar {
+  height: 5px;
+  overflow: visible;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffe6c5;
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0 0 0 0px;
+  min-height: 28px;
+  padding: 100px 0 0;
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0), inset 0 -1px 0 rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8d8d8d;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #666666;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1b0f07;
+}
+
+/* 細捲軸結束 */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #000000;
+  height: auto;
+  position: relative;
+}
+
+body {
+  height: auto;
+  overflow: visible;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  margin: 0;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.sp-d-none {
+  display: block;
+}
+
+.pc-d-none {
+  display: none;
+}
+
+/*右側nav*/
+.right_nav {
+  position: fixed;
+  width: 9.16%;
+  height: auto;
+  padding-bottom: 31%;
+  top: calc(50vh - 25%);
+  left: 3%;
+  background: url(../images/right_nav_bg.png) no-repeat;
+  background-size: 100%;
+  z-index: 75;
+  display: block;
+}
+
+.right_QR {
+  position: absolute;
+  width: 62.5%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 28%;
+  left: 19%;
+  z-index: 76;
+}
+
+.right_apple_btn {
+  position: absolute;
+  width: 75%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 48%;
+  left: 13%;
+  z-index: 76;
+}
+
+.right_apple_btn > img {
+  transform: scale(1, 1);
+  transition: all 0.2s ease-out;
+}
+
+.right_apple_btn > img:hover {
+  transform: scale(0.9, 0.9);
+}
+
+.right_google_btn {
+  position: absolute;
+  width: 75%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 56%;
+  left: 13%;
+  z-index: 76;
+}
+
+.right_google_btn > img {
+  transform: scale(1, 1);
+  transition: all 0.2s ease-out;
+}
+
+.right_google_btn > img:hover {
+  transform: scale(0.9, 0.9);
+}
+
+.right_apk_btn {
+  position: absolute;
+  width: 75%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 64%;
+  left: 13%;
+  z-index: 76;
+}
+
+.right_apk_btn > img {
+  transform: scale(1, 1);
+  transition: all 0.2s ease-out;
+}
+
+.right_apk_btn > img:hover {
+  transform: scale(0.9, 0.9);
+}
+
+.right_facebook_btn {
+  position: absolute;
+  width: 75%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 72%;
+  left: 13%;
+  z-index: 76;
+}
+
+.right_facebook_btn > img {
+  transform: scale(1, 1);
+  transition: all 0.2s ease-out;
+}
+
+.right_facebook_btn > img:hover {
+  transform: scale(0.9, 0.9);
+}
+
+@media (max-width: 1024px) {
+  .right_nav {
+    display: none;
+  }
+}
+
+/*--↓主視覺區域↓--*/
+.kv_zone {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 48%;
+  background: url(../images/LV1_bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center top;
+  padding-top: 30px;
+  background-color: #0d192f;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.fire_box {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  padding-bottom: 30%;
+  bottom: 0;
+  left: 0;
+  display: block;
+}
+
+#particles-js {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.kv_zone .content {
+  position: absolute;
+  left: -15%;
+  /* top: -5%; */
+  width: 130%;
+  height: 110%;
+}
+
+.kv_zone #scene .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.kv_zone #scene .layer .float-city {
+  position: absolute;
+  top: 9.5%;
+  right: calc(50% - 61.5% / 2);
+  width: 4.5%;
+  height: auto;
+  animation: up-down-34 4s infinite ease-in-out;
+}
+
+.kv_zone #scene .layer .apng-bird {
+  position: absolute;
+  top: 12%;
+  width: 12%;
+  height: auto;
+  animation-name: flying-across, flying-float;
+  animation-iteration-count: infinite, infinite;
+  animation-duration: 15s, 4s;
+  animation-play-state: running, running;
+  transform-origin: top;
+}
+
+.kv_zone #scene .layer .front-pillar {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 13%;
+  height: auto;
+}
+
+.kv_zone #scene .layer .clouds {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  background: transparent url("../images/clouds.png") repeat top center;
+  z-index: 3;
+  -moz-animation: move-clouds-back 200s linear infinite;
+  -ms-animation: move-clouds-back 200s linear infinite;
+  -o-animation: move-clouds-back 200s linear infinite;
+  -webkit-animation: move-clouds-back 200s linear infinite;
+  animation: move-clouds-back 200s linear infinite;
+}
+
+/* 20230303 更新新增 start */
+.kv_zone #scene .layer#slideShow img {
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  width: 50%;
+  height: auto;
+  display: none;
+}
+/* 20230303 更新新增 end */
+
+.kv_zone #scene .layer .front-rock {
+  position: absolute;
+  top: 70%;
+  left: 8%;
+  width: 60%;
+  height: auto;
+}
+
+/*logo*/
+.KV_logo {
+  position: absolute;
+  width: 18%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 18%;
+  left: 21%;
+  z-index: 63;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+/*slogan*/
+.slogan {
+  position: absolute;
+  width: 25%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 39%;
+  left: 16%;
+  z-index: 63;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+/*KV_下載區*/
+.KV_app_box {
+  position: absolute;
+  width: 31.77%;
+  height: auto;
+  padding-bottom: 8.5%;
+  top: 75%;
+  left: 13%;
+  background: url(../images/KV_app_bg.png) no-repeat;
+  background-size: 100%;
+  background-color: rgba(165, 42, 42, 0);
+  z-index: 63;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+/*KV_icon*/
+.KV_icon {
+  position: absolute;
+  width: 18.03%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 11%;
+  left: 6%;
+  z-index: 64;
+}
+
+/*KV_QR*/
+.KV_QR {
+  position: absolute;
+  width: 18.03%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 11%;
+  left: 26%;
+  z-index: 64;
+}
+
+/*KV_apple store*/
+.KV_apple_btn {
+  position: absolute;
+  width: 24.42%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 15%;
+  left: 46%;
+  z-index: 64;
+}
+
+.KV_apple_btn > img {
+  transform: scale(1, 1);
+  transition: all 0.2s ease-out;
+}
+
+.KV_apple_btn > img:hover {
+  transform: scale(0.9, 0.9);
+}
+
+/*KV_google play*/
+.KV_google_btn {
+  position: absolute;
+  width: 24.42%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 49%;
+  left: 46%;
+  z-index: 64;
+}
+
+.KV_google_btn > img {
+  transform: scale(1, 1);
+  transition: all 0.2s ease-out;
+}
+
+.KV_google_btn > img:hover {
+  transform: scale(0.9, 0.9);
+}
+
+/*KV_apk*/
+.KV_apk_btn {
+  position: absolute;
+  width: 24.42%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 15%;
+  left: 72%;
+  z-index: 64;
+}
+
+.KV_apk_btn > img {
+  transform: scale(1, 1);
+  transition: all 0.2s ease-out;
+}
+
+.KV_apk_btn > img:hover {
+  transform: scale(0.9, 0.9);
+}
+
+/*KV_facebook*/
+.KV_PC_btn {
+  position: absolute;
+  width: 24.42%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 49%;
+  left: 72%;
+  z-index: 64;
+}
+
+.KV_PC_btn > img {
+  transform: scale(1, 1);
+  transition: all 0.2s ease-out;
+}
+
+.KV_PC_btn > img:hover {
+  transform: scale(0.9, 0.9);
+}
+
+/*play_yt*/
+.play_yt {
+  position: absolute;
+  width: 8%;
+  height: auto;
+  top: 50%;
+  left: 39%;
+  z-index: 64;
+  padding-bottom: 6%;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  cursor: pointer;
+}
+
+.play_btn {
+  position: absolute;
+  width: 80%;
+  height: auto;
+  top: 0%;
+  left: 2%;
+  z-index: 64;
+  animation: breath 1.5s infinite;
+  -webkit-animation: breath 1.5s infinite;
+  -moz-animation: breath 1.5s infinite;
+  -ms-animation: breath 1.5s infinite;
+}
+
+.play_sc {
+  position: absolute;
+  width: 80%;
+  height: auto;
+  top: 0%;
+  left: 0%;
+  z-index: 62;
+  -webkit-animation: rotate 2s linear infinite;
+  -moz-animation: rotate 2s linear infinite;
+  -ms-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;
+}
+
+.top_arr {
+  position: absolute;
+  width: 29.01%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 67%;
+  left: 36%;
+  z-index: 63;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+/*影片背景*/
+.videoArea {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  display: block;
+}
+
+.videoArea video {
+  object-fit: cover;
+  object-position: left top;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 1400px) {
+  .kv_zone #scene .layer .front-pillar {
+    top: 36%;
+  }
+
+  .kv_zone #scene .layer .clouds {
+    top: 30%;
+  }
+
+  .kv_zone #scene .layer .apng-ch01 {
+    top: 5%;
+  }
+
+  .kv_zone #scene .layer .front-rock {
+    top: 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  /*影片背景*/
+  .videoArea {
+    display: none;
+  }
+
+  .kv_zone #scene .layer .front-pillar {
+    top: 29%;
+  }
+
+  .kv_zone #scene .layer .clouds {
+    top: 20%;
+  }
+
+  .kv_zone #scene .layer .apng-ch01 {
+    top: 0%;
+  }
+
+  .kv_zone #scene .layer .front-rock {
+    top: 38%;
+  }
+}
+
+@media (max-width: 820px) {
+  .kv_zone #scene .layer .front-pillar {
+    top: 22%;
+  }
+
+  .kv_zone #scene .layer .clouds {
+    top: 0%;
+  }
+
+  .kv_zone #scene .layer .front-rock {
+    top: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .kv_zone {
+    width: 100%;
+    height: auto;
+    padding-bottom: 180%;
+    background: url(../images/LV1_bg_sp.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+    overflow: hidden;
+  }
+
+  /* 20230303 新增 start */
+  .kv_zone #scene .layer .float-city {
+    top: 10%;
+    width: 10%;
+  }
+
+  .kv_zone #scene .layer .apng-bird {
+    top: 35%;
+    width: 25%;
+    height: auto;
+    animation-name: flying-across, flying-float;
+    animation-iteration-count: infinite, infinite;
+    animation-duration: 25s, 4s;
+    animation-play-state: running, running;
+    transform-origin: top;
+  }
+
+  .kv_zone #scene .layer#slideShow .apng-ch01 {
+    position: absolute;
+    top: 10%;
+    right: -30%;
+    width: 150%;
+    height: auto;
+    display: none;
+  }
+
+  .kv_zone #scene .layer#slideShow .apng-ch03 {
+    position: absolute;
+    top: 18%;
+    right: -15%;
+    width: 140%;
+    height: auto;
+    display: none;
+  }
+
+  .kv_zone #scene .layer#slideShow .apng-ch06 {
+    position: absolute;
+    top: 10%;
+    right: -20%;
+    width: 150%;
+    height: auto;
+    display: none;
+  }
+
+  .kv_zone #scene .layer#slideShow .apng-ch07 {
+    position: absolute;
+    top: 15%;
+    right: -20%;
+    width: 130%;
+    height: auto;
+    display: none;
+  }
+
+  .kv_zone #scene .layer#slideShow .apng-ch05 {
+    position: absolute;
+    top: 14%;
+    right: -25%;
+    width: 140%;
+    height: auto;
+    display: none;
+  }
+
+  .kv_zone #scene .layer .clouds {
+    top: 30%;
+    height: 100%;
+  }
+  /* 20230303 新增 end */
+
+  /* 20230303 更新 start */
+  .KV_logo {
+    width: 50%;
+    top: 9%;
+    left: 0%;
+    animation: custom-zoom 5s infinite;
+    -webkit-animation: custom-zoom 5s infinite;
+  }
+  /* 20230303 更新 end */
+
+  .KV_logo > img {
+    animation: custom-zoom 3s infinite;
+    -webkit-animation: custom-zoom 3s infinite;
+  }
+
+  .slogan {
+    width: 90%;
+    top: 64%;
+    left: calc(50% - 45%);
+  }
+
+  .KV_app_box {
+    width: 90%;
+    padding-bottom: 20.5%;
+    top: 78%;
+    left: calc(50% - 45%);
+    background: url(../images/KV_app_bg_tb.png) no-repeat center;
+    background-size: 100%;
+  }
+
+  .KV_apple_btn,
+  .KV_apk_btn {
+    top: 18%;
+  }
+
+  .KV_google_btn,
+  .KV_PC_btn {
+    top: 53%;
+  }
+
+  .play_yt {
+    width: 25%;
+    top: 54%;
+    left: calc(50% - 12.5%);
+    padding-bottom: 22%;
+  }
+}
+/*--↑主視覺區域↑--*/
+
+/*--↓艾肯BN區↓--*/
+.banner_zone {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: url(../images/banner_zone_bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center top;
+  z-index: 50;
+  margin-top: -1px;
+}
+
+.index_bg06_mc {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.banner_zone .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-prev2,
+.swiper-button-next2 {
+  position: absolute;
+  top: calc(50% - 68px / 2);
+  width: 63px;
+  height: 68px;
+  z-index: 70;
+  cursor: pointer;
+}
+
+.swiper-button-next2 {
+  background: url(../images/next_arr.png) no-repeat;
+  background-size: 100%;
+  right: 20%;
+}
+
+.swiper-button-prev2 {
+  background: url(../images/prev_arr.png) no-repeat;
+  background-size: 100%;
+  left: 20%;
+}
+
+@media (max-width: 768px) {
+  .banner_zone {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: url(../images/banner_zone_bg_sp.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+    z-index: 50;
+    margin-top: -1px;
+  }
+
+  .index_bg06_mc {
+    width: 90%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .swiper-button-next2 {
+    top: calc(50% - 43px / 2);
+    right: 2%;
+    width: 40px;
+    height: 43px;
+  }
+
+  .swiper-button-prev2 {
+    top: calc(50% - 43px / 2);
+    left: 2%;
+    width: 40px;
+    height: 43px;
+  }
+}
+/*--↑艾肯BN區↑--*/
+
+/*--↓fb+news↓--*/
+.LV2 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: url(../images/LV2_bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-color: #065bfa;
+  z-index: 50;
+  overflow: hidden;
+  margin-top: -1px;
+}
+
+.LV2_container {
+  width: 90%;
+  /* height: 700px; */
+  margin: 0 auto;
+  margin-bottom: 1%;
+  position: relative;
+  z-index: 3;
+}
+
+/*標題*/
+h2.title01 {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  text-align: left;
+  margin: 0;
+}
+.title01 img {
+  display: inline-block;
+  width: 27%;
+  height: auto;
+  margin: 2% 0 2% 12%; /* 20230303 更新 */
+}
+
+.dec-01 {
+  position: absolute;
+  z-index: 1;
+  top: 36%;
+  right: 0;
+  background: url(../images/dec_01.png) no-repeat;
+  background-position: top left;
+  background-size: 199%;
+  width: 16%;
+  height: 100%;
+}
+
+/*新聞_tab*/
+.news_tab_box {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  /* top: 13%; */
+  top: calc(50% - 33%);
+  z-index: 63;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.news_inner_tab {
+  display: inline-block;
+  background-color: #3e09a100;
+  width: 17.3%;
+  height: auto;
+  margin-top: 1%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  padding-bottom: 9%;
+}
+
+.news_inner_tab:nth-child(1) {
+  background-image: url(../images/btn_news_teb_01_off.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.news_inner_tab:nth-child(2) {
+  background-image: url(../images/btn_news_teb_02_off.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.news_inner_tab:nth-child(3) {
+  background-image: url(../images/btn_news_teb_03_off.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.news_inner_tab:nth-child(4) {
+  background-image: url(../images/btn_news_teb_04_off.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.news_inner_tab:nth-child(1).now {
+  background-image: url(../images/btn_news_teb_01_on.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.news_inner_tab:nth-child(2).now {
+  background-image: url(../images/btn_news_teb_02_on.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.news_inner_tab:nth-child(3).now {
+  background-image: url(../images/btn_news_teb_03_on.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.news_inner_tab:nth-child(4).now {
+  background-image: url(../images/btn_news_teb_04_on.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.click img {
+  transition: 0.5s ease-in-out;
+}
+
+.fb_news_box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+/* facebook_inner */
+.facebook_inner {
+  width: 591px;
+  height: 623px;
+  /* padding: 5% 3.5%; */
+  background: url(../images/fb_inner_bg.png) no-repeat center;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.facebook_iframe_border {
+  /* background-color: #065bfa; */
+  width: 80% !important;
+  height: 77% !important;
+  margin-top: 0 !important;
+  z-index: 1;
+}
+
+/*新聞_主區*/
+.news_con_box {
+  position: relative;
+  width: 845px;
+  height: 623px;
+  background: url(../images/news_con_bg.png) no-repeat center;
+  background-size: 100%;
+  background-color: #065bfa00;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.news_inner_con {
+  position: absolute;
+  width: 85%;
+  top: calc(50% - 20%);
+  /* top: 28%; */
+  left: calc(50% - 42.5%);
+  background-color: #0ff06d00;
+  display: none;
+}
+
+.list_box {
+  width: 100%;
+  height: auto;
+  padding-bottom: 2.5%;
+  padding-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0c70f00;
+  border-bottom: 1px #728996 dashed;
+}
+
+.news_type_icon {
+  width: 20%;
+  height: auto;
+}
+
+.news_type_icon > img {
+  transform: scale(1, 1);
+  transition: all 0.2s ease-out;
+}
+
+/*標題*/
+.list_title {
+  width: 60%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  background-color: rgba(165, 42, 42, 0);
+}
+
+.list_title p {
+  font-size: 1vw;
+  line-height: 1;
+  color: #2a3453;
+  font-weight: 600;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  /*文字...*/
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/*日期*/
+.list_deta {
+  width: 13%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgba(165, 42, 42, 0);
+}
+
+.list_deta p {
+  font-size: 1vw;
+  line-height: 1;
+  color: #787878;
+  font-weight: 100;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.list_box:hover {
+  background-color: #d5d9e19d;
+}
+
+.list_box:hover > .news_type_icon > img {
+  transform: scale(0.9, 0.9);
+}
+
+/*more按鈕*/
+.news_more_btn {
+  position: absolute;
+  width: 26%;
+  height: auto;
+  left: calc(50% - 13%);
+  margin-top: 3%;
+}
+
+.news_more_btn > img {
+  transform: scale(1, 1);
+  transition: all 0.2s ease-out;
+}
+
+.news_more_btn > img:hover {
+  transform: scale(0.9, 0.9);
+}
+
+.news_inner_con:nth-child(2) {
+  background-color: #0f69f000;
+  display: none;
+}
+
+.news_inner_con:nth-child(3) {
+  background-color: #f0c70f00;
+  display: none;
+}
+
+.news_inner_con:nth-child(4) {
+  background-color: #f00f1a00;
+  display: none;
+}
+
+.news_inner_con.now {
+  display: block;
+}
+
+/*星星背景物件*/
+.lv2_star_1 {
+  position: absolute;
+  width: 4.68%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 11%;
+  left: 11.5%;
+  z-index: 61;
+  animation: kirakira 0.6s infinite alternate
+    cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.lv2_star_2 {
+  position: absolute;
+  width: 4.68%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 70%;
+  left: 8.5%;
+  z-index: 61;
+  animation: kirakira 0.9s infinite alternate
+    cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.lv2_star_3 {
+  position: absolute;
+  width: 4.68%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 37%;
+  left: 79.5%;
+  z-index: 61;
+  animation: kirakira 1.1s infinite alternate
+    cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.lv2_star_4 {
+  position: absolute;
+  width: 4.68%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 79%;
+  left: 79.5%;
+  z-index: 61;
+  animation: kirakira 0.7s infinite alternate
+    cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.lv2_star_5 {
+  position: absolute;
+  width: 4.68%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 59%;
+  left: 71.5%;
+  z-index: 61;
+  animation: kirakira 0.9s infinite alternate
+    cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.lv2_star_6 {
+  position: absolute;
+  width: 4.68%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 84%;
+  left: 16.5%;
+  z-index: 61;
+  animation: kirakira 1.3s infinite alternate
+    cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@media (max-width: 1400px) {
+  .news_con_box {
+    height: 34rem;
+  }
+
+  .facebook_inner {
+    height: 34rem;
+  }
+}
+
+@media (max-width: 1240px) {
+  .news_con_box {
+    height: 30rem;
+  }
+
+  .facebook_inner {
+    height: 30rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .LV2 {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .news_con_box {
+    height: 24rem;
+  }
+
+  .facebook_inner {
+    height: 24rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .news_con_box {
+    height: 20.5rem;
+  }
+
+  .facebook_inner {
+    height: 20.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .fb_news_box {
+    flex-direction: column;
+    gap: 5%;
+    margin-top: 0%;
+  }
+
+  .facebook_inner {
+    width: 100%;
+    background: url(../images/fb_inner_bg_sp.png) no-repeat center;
+    background-size: 100%;
+  }
+
+  .facebook_inner {
+    width: 100%;
+    height: 34rem;
+  }
+
+  .news_inner_con {
+    height: 62%;
+    top: 24%;
+  }
+
+  .LV2 {
+    width: 100%;
+    height: auto;
+    padding-bottom: 15%;
+    background: url(../images/LV2_bg_sp.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-color: rgba(165, 42, 42, 0);
+    overflow: hidden;
+  }
+
+  h2.title01 {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+    text-align: left;
+    margin: 0;
+  }
+  .title01 img {
+    width: 70%;
+    margin: 10% 5%;
+  }
+
+  .news_tab_box {
+    width: 100%;
+    top: 12%;
+  }
+
+  .list_box {
+    width: 100%;
+    height: auto;
+  }
+
+  .news_type_icon {
+    width: 20%;
+    height: auto;
+  }
+
+  .list_title {
+    width: 50%;
+    margin-right: 6%;
+  }
+
+  .list_title p {
+    font-size: 2.8vw;
+    font-weight: 600;
+  }
+
+  .list_deta p {
+    font-size: 2.8vw;
+    font-weight: 600;
+  }
+
+  .news_more_btn {
+    width: 40.9%;
+    padding-bottom: 0%;
+    bottom: 2%;
+    left: 30%;
+  }
+
+  .news_con_decoration {
+    width: 68.31%;
+    top: 41%;
+    left: 16.5%;
+  }
+
+  .news_con_box {
+    width: 100%;
+    padding-bottom: 35%;
+    top: 14%;
+    background: url(../images/news_con_bg_sp.png) no-repeat;
+    background-size: 100%;
+  }
+
+  .list_box {
+    width: 100%;
+    height: auto;
+    padding-bottom: 2.8%;
+    padding-top: 2.8%;
+  }
+}
+
+@media (max-width: 540px) {
+  .news_con_box {
+    padding-bottom: 17%;
+  }
+
+  .facebook_inner {
+    height: 25rem;
+  }
+
+  /* 20230303 新增 start */
+  .facebook_iframe_border {
+    height: 65% !important;
+  }
+  /* 20230303 新增 end */
+}
+
+/* 20230303 新增 start */
+@media (max-width: 490px) {
+  .news_inner_con {
+    height: 57%;
+    top: 22%;
+  }
+  .facebook_inner {
+    height: 23rem;
+  }
+}
+/* 20230303 新增 end */
+
+@media (max-width: 414px) {
+  .news_con_box {
+    padding-bottom: 0%;
+  }
+
+  .facebook_inner {
+    height: 19rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .news_con_box {
+    height: 17.5rem;
+    padding-bottom: 0%;
+  }
+
+  .facebook_inner {
+    height: 19rem;
+  }
+
+  .news_inner_con {
+    height: 65%;
+    top: 22%;
+  }
+
+  .facebook_iframe_border {
+    height: 68% !important;
+  }
+}
+/*--↑news+角色↑--*/
+
+/* --↓職業介紹↓-- */
+.LV3 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 33%;
+  background: url(../images/LV3_bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-color: #065bfa;
+  z-index: 50;
+  overflow: hidden;
+  margin-top: -1px;
+}
+
+/*標題*/
+h2.title02 {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  text-align: right;
+  margin: 0;
+}
+
+.title02 img {
+  display: inline-block;
+  width: 27%;
+  height: auto;
+  margin: 2% 12% 2% 0; /* 20230303 更新 */
+}
+
+.info-ch01 {
+  position: absolute;
+  z-index: 2;
+  top: 35%;
+  left: calc(50% - 46%);
+  width: 30%;
+  height: auto;
+}
+
+.info-ch02 {
+  position: absolute;
+  z-index: 1;
+  top: 26%;
+  left: calc(50% - 32%);
+  width: 22%;
+  height: auto;
+}
+
+.info-ch03 {
+  position: absolute;
+  z-index: 2;
+  top: 36%;
+  left: calc(50% - 27%);
+  width: 24%;
+  height: auto;
+}
+
+.info-ch04 {
+  position: absolute;
+  z-index: 1;
+  top: 19%;
+  left: calc(50% - 15%);
+  width: 22.5%;
+  height: auto;
+}
+
+.info-ch05 {
+  position: absolute;
+  z-index: 2;
+  top: 38%;
+  right: calc(50% - 13%);
+  width: 16%;
+  height: auto;
+}
+
+.info-ch06 {
+  position: absolute;
+  z-index: 1;
+  top: 29%;
+  right: calc(50% - 19%);
+  width: 21%;
+  height: auto;
+}
+
+.info-ch07 {
+  position: absolute;
+  z-index: 2;
+  top: 38%;
+  right: calc(50% - 34.5%);
+  width: 23%;
+  height: auto;
+}
+
+.info-ch08 {
+  position: absolute;
+  z-index: 1;
+  top: 29%;
+  right: calc(50% - 47%);
+  width: 23%;
+  height: auto;
+}
+
+.mark-size {
+  width: 2%;
+}
+
+.mark-01 {
+  position: absolute;
+  z-index: 99;
+  top: 31%;
+  left: calc(50% - 26%);
+  display: none;
+  animation: breath 1.5s infinite;
+  -webkit-animation: breath 1.5s infinite;
+  -moz-animation: breath 1.5s infinite;
+  -ms-animation: breath 1.5s infinite;
+}
+.mark-02 {
+  position: absolute;
+  z-index: 99;
+  top: 23%;
+  left: calc(50% - 20%);
+  display: none;
+  animation: breath 1.5s infinite;
+  -webkit-animation: breath 1.5s infinite;
+  -moz-animation: breath 1.5s infinite;
+  -ms-animation: breath 1.5s infinite;
+}
+
+.mark-03 {
+  position: absolute;
+  z-index: 99;
+  top: 32%;
+  left: calc(50% - 10%);
+  display: none;
+  animation: breath 1.5s infinite;
+  -webkit-animation: breath 1.5s infinite;
+  -moz-animation: breath 1.5s infinite;
+  -ms-animation: breath 1.5s infinite;
+}
+
+.mark-04 {
+  position: absolute;
+  z-index: 99;
+  top: 23%;
+  left: 50%;
+  display: none;
+  animation: breath 1.5s infinite;
+  -webkit-animation: breath 1.5s infinite;
+  -moz-animation: breath 1.5s infinite;
+  -ms-animation: breath 1.5s infinite;
+}
+
+.mark-05 {
+  position: absolute;
+  z-index: 99;
+  top: 32%;
+  right: calc(50% - 8%);
+  display: none;
+  animation: breath 1.5s infinite;
+  -webkit-animation: breath 1.5s infinite;
+  -moz-animation: breath 1.5s infinite;
+  -ms-animation: breath 1.5s infinite;
+}
+
+.mark-06 {
+  position: absolute;
+  z-index: 99;
+  top: 29%;
+  right: calc(50% - 19%);
+  display: none;
+  animation: breath 1.5s infinite;
+  -webkit-animation: breath 1.5s infinite;
+  -moz-animation: breath 1.5s infinite;
+  -ms-animation: breath 1.5s infinite;
+}
+
+.mark-07 {
+  position: absolute;
+  z-index: 99;
+  top: 35%;
+  right: calc(50% - 27%);
+  display: none;
+  animation: breath 1.5s infinite;
+  -webkit-animation: breath 1.5s infinite;
+  -moz-animation: breath 1.5s infinite;
+  -ms-animation: breath 1.5s infinite;
+}
+
+.mark-08 {
+  position: absolute;
+  z-index: 99;
+  top: 29%;
+  right: calc(50% - 40%);
+  display: none;
+  animation: breath 1.5s infinite;
+  -webkit-animation: breath 1.5s infinite;
+  -moz-animation: breath 1.5s infinite;
+  -ms-animation: breath 1.5s infinite;
+}
+
+.LV3 .clouds {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  background: transparent url("../images/clouds.png") repeat top center;
+  z-index: 1;
+  -moz-animation: move-clouds-back 200s linear infinite;
+  -ms-animation: move-clouds-back 200s linear infinite;
+  -o-animation: move-clouds-back 200s linear infinite;
+  -webkit-animation: move-clouds-back 200s linear infinite;
+  animation: move-clouds-back 200s linear infinite;
+}
+
+.dec-rock-01 {
+  position: absolute;
+  z-index: 99;
+  bottom: -4%;
+  left: calc(50% - 37%);
+  width: 19%;
+  height: auto;
+}
+
+.dec-rock-02 {
+  position: absolute;
+  z-index: 99;
+  bottom: -1%;
+  right: calc(50% - 37%);
+  width: 20%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .LV3 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 0%;
+    background: url(../images/LV3_bg_sp.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+    z-index: 50;
+  }
+
+  .title02 img {
+    width: 70%;
+    margin: 10% 5% 0 0;
+  }
+}
+/* --↑職業介紹↑-- */
+
+/* --↓幻獸介紹↓-- */
+.LV4 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 37%;
+  background: url(../images/LV4_bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-color: #065bfa;
+  z-index: 50;
+  overflow: hidden;
+  margin-top: -1px;
+}
+
+/*標題*/
+h2.title03 {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  text-align: left;
+  margin: 0;
+}
+
+.title03 img {
+  display: inline-block;
+  width: 27%;
+  height: auto;
+  margin: 2% 0 2% 12%; /* 20230303 更新 */
+}
+
+.info-eud01 {
+  position: absolute;
+  z-index: 1;
+  top: 26%;
+  right: calc(50% - 31%);
+  width: 37.5%;
+  height: auto;
+}
+
+.info-eud02 {
+  position: absolute;
+  z-index: 3;
+  top: 64%;
+  left: calc(50% - 7.2%);
+  width: 14.2%;
+  height: auto;
+}
+
+.info-eud03 {
+  position: absolute;
+  z-index: 2;
+  top: 23%;
+  left: calc(50% - 29%);
+  width: 30%;
+  height: auto;
+}
+
+.info-eud04 {
+  position: absolute;
+  z-index: 3;
+  top: 35%;
+  right: calc(50% - 29.8%);
+  width: 18.5%;
+  height: auto;
+}
+
+.info-eud05 {
+  position: absolute;
+  z-index: 2;
+  top: 64%;
+  left: calc(50% - 29%);
+  width: 9%;
+  height: auto;
+}
+
+.info-eud06 {
+  position: absolute;
+  z-index: 3;
+  top: 52%;
+  right: calc(50% - 17%);
+  width: 10%;
+  height: auto;
+}
+
+.info-eud07 {
+  position: absolute;
+  z-index: 100;
+  bottom: 5%;
+  left: calc(50% - 18%);
+  width: 13%;
+  height: auto;
+}
+
+.info-eud08 {
+  position: absolute;
+  z-index: 1;
+  top: 22%;
+  right: calc(50% - 24%);
+  width: 9%;
+  height: auto;
+}
+
+.info-eud09 {
+  position: absolute;
+  z-index: 2;
+  top: 47%;
+  right: calc(50% - 37%);
+  width: 9%;
+  height: auto;
+}
+
+.mark-11 {
+  position: absolute;
+  z-index: 99;
+  top: 22%;
+  right: calc(50% - 14%);
+  display: none;
+  animation: breath 1.5s infinite;
+  -webkit-animation: breath 1.5s infinite;
+  -moz-animation: breath 1.5s infinite;
+  -ms-animation: breath 1.5s infinite;
+}
+.mark-12 {
+  position: absolute;
+  z-index: 99;
+  top: 61%;
+  left: calc(50% - -6%);
+  display: none;
+  animation: breath 1.5s infinite;
+  -webkit-animation: breath 1.5s infinite;
+  -moz-animation: breath 1.5s infinite;
+  -ms-animation: breath 1.5s infinite;
+}
+
+.mark-13 {
+  position: absolute;
+  z-index: 99;
+  top: 23%;
+  left: calc(50% - 5%);
+  display: none;
+  animation: breath 1.5s infinite;
+  -webkit-animation: breath 1.5s infinite;
+  -moz-animation: breath 1.5s infinite;
+  -ms-animation: breath 1.5s infinite;
+}
+
+.mark-14 {
+  position: absolute;
+  z-index: 99;
+  top: 35%;
+  right: calc(50% - 29.8%);
+  display: none;
+  animation: breath 1.5s infinite;
+  -webkit-animation: breath 1.5s infinite;
+  -moz-animation: breath 1.5s infinite;
+  -ms-animation: breath 1.5s infinite;
+}
+
+.mark-15 {
+  position: absolute;
+  z-index: 99;
+  top: 66%;
+  left: calc(50% - 20%);
+  display: none;
+  animation: breath 1.5s infinite;
+  -webkit-animation: breath 1.5s infinite;
+  -moz-animation: breath 1.5s infinite;
+  -ms-animation: breath 1.5s infinite;
+}
+
+.mark-16 {
+  position: absolute;
+  z-index: 99;
+  top: 65%;
+  right: calc(50% - 20%);
+  display: none;
+  animation: breath 1.5s infinite;
+  -webkit-animation: breath 1.5s infinite;
+  -moz-animation: breath 1.5s infinite;
+  -ms-animation: breath 1.5s infinite;
+}
+
+.mark-17 {
+  position: absolute;
+  z-index: 99;
+  bottom: 28%;
+  left: calc(50% - 8%);
+  display: none;
+  animation: breath 1.5s infinite;
+  -webkit-animation: breath 1.5s infinite;
+  -moz-animation: breath 1.5s infinite;
+  -ms-animation: breath 1.5s infinite;
+}
+
+.mark-18 {
+  position: absolute;
+  z-index: 99;
+  top: 19%;
+  right: calc(50% - 26%);
+  display: none;
+  animation: breath 1.5s infinite;
+  -webkit-animation: breath 1.5s infinite;
+  -moz-animation: breath 1.5s infinite;
+  -ms-animation: breath 1.5s infinite;
+}
+
+.mark-19 {
+  position: absolute;
+  z-index: 99;
+  top: 43%;
+  right: calc(50% - 39%);
+  display: none;
+  animation: breath 1.5s infinite;
+  -webkit-animation: breath 1.5s infinite;
+  -moz-animation: breath 1.5s infinite;
+  -ms-animation: breath 1.5s infinite;
+}
+
+.LV4 .clouds {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  background: transparent url("../images/clouds.png") repeat top center;
+  z-index: 1;
+  -moz-animation: move-clouds-back 200s linear infinite;
+  -ms-animation: move-clouds-back 200s linear infinite;
+  -o-animation: move-clouds-back 200s linear infinite;
+  -webkit-animation: move-clouds-back 200s linear infinite;
+  animation: move-clouds-back 200s linear infinite;
+}
+
+.dec-rock-03 {
+  position: absolute;
+  z-index: 1;
+  bottom: 10%;
+  left: calc(50% - 46%);
+  width: 30%;
+  height: auto;
+}
+
+.dec-rock-04 {
+  position: absolute;
+  z-index: 99;
+  bottom: -2%;
+  left: calc(50% - 22.5%);
+  width: 22%;
+  height: auto;
+}
+
+.dec-rock-05 {
+  position: absolute;
+  z-index: 1;
+  bottom: 13%;
+  right: calc(50% - 40%);
+  width: 19%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .LV4 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 0%;
+    background: url(../images/LV4_bg_sp.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+    z-index: 50;
+  }
+
+  .title03 img {
+    width: 70%;
+    margin: 10% 0 0 5%;
+  }
+}
+/* --↑幻獸介紹↑-- */
+
+/* --↓雲海無境↓-- */
+.LV5 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: url(../images/LV5_bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center top;
+  z-index: 50;
+  margin-top: -1px;
+}
+
+.ch01 {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: -9%;
+  background: url(../images/apng_ch03.png) no-repeat;
+  background-position: center top;
+  background-size: 115%;
+  width: 52%;
+  height: 100%;
+}
+
+.ch02 {
+  position: absolute;
+  z-index: 2;
+  top: 2%;
+  right: 0%;
+  background: url(../images/apng_ch07.png) no-repeat;
+  background-position: center top;
+  background-size: 120%;
+  width: 45%;
+  height: 100%;
+}
+
+.video-banner-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: -2% auto 0 auto;
+  box-sizing: content-box;
+  padding-top: 10%;
+  padding-bottom: 8%;
+}
+
+.video-banner-container .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(0.85, 0.85);
+}
+
+.video-banner-container .swiper-slide {
+  position: relative;
+  z-index: 1;
+}
+
+.video-banner-container .swiper-slide-active {
+  z-index: 2;
+}
+
+.video-banner-container .swiper-slide-active img {
+  transform: scale(1, 1);
+}
+
+.video-banner-container .swiper-slide-active-prev,
+.video-banner-container .swiper-slide-active-next {
+  z-index: 1;
+}
+
+.video-banner-container .swiper-backface-hidden .swiper-slide-prev {
+  transform: translate3d(75%, 0, 0);
+}
+
+.video-banner-container .swiper-backface-hidden .swiper-slide-next {
+  transform: translate3d(-75%, 0, 0);
+}
+
+.video-banner-container .swiper-slide:not(.swiper-slide-active)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  border: 0px solid rgba(0, 0, 0, 0.45);
+  z-index: 1;
+  transform: scale(0.85, 0.85);
+}
+
+@media (max-width: 768px) {
+  .LV5 {
+    width: 100%;
+    height: auto;
+    padding-bottom: 0%;
+    background: url(../images/LV5_bg_sp.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+    overflow: hidden;
+  }
+
+  .video-banner-container {
+    width: 80%;
+    padding-top: 80%;
+    padding-bottom: 15%;
+  }
+
+  .video-banner-container .swiper-slide img {
+    transform: scale(1, 1);
+  }
+
+  .video-banner-container .swiper-slide:not(.swiper-slide-active)::before {
+    display: none;
+  }
+
+  .ch03 {
+    position: absolute;
+    z-index: 0;
+    top: 0%;
+    right: 0%;
+    background: url(../images/apng_ch06.png) no-repeat;
+    background-position: center top;
+    background-size: 170%;
+    width: 100%;
+    height: 70%;
+  }
+}
+
+/* --↑雲海無境↑-- */
+
+/*--↓遊戲特色↓--*/
+.LV6 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 0%;
+  background: url(../images/LV6_bg.jpg) no-repeat;
+  background-position: center top;
+  background-size: cover;
+  padding-top: 30px;
+  z-index: 50;
+  margin-top: -1px;
+}
+
+/*標題*/
+h2.title04 {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  text-align: right;
+  margin: 0;
+}
+
+.title04 img {
+  display: inline-block;
+  width: 27%;
+  height: auto;
+  margin: 2% 12% 2% 0; /* 20230303 更新 */
+}
+
+.app-banner-container {
+  position: relative;
+  width: 55%;
+  height: auto;
+  margin: -2% auto 0 auto;
+  box-sizing: content-box;
+}
+
+.app-banner-container .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(0.85, 0.85);
+}
+
+.app-banner-container .swiper-slide {
+  position: relative;
+  z-index: 1;
+}
+
+.app-banner-container .swiper-slide-active {
+  z-index: 2;
+}
+
+.app-banner-container .swiper-slide-active img {
+  transform: scale(1, 1);
+}
+
+.app-banner-container .swiper-slide-active-prev,
+.app-banner-container .swiper-slide-active-next {
+  z-index: 1;
+}
+
+.app-banner-container .swiper-slide:not(.swiper-slide-active)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  border: 0px solid rgba(0, 0, 0, 0.45);
+  z-index: 1;
+  transform: scale(0.85, 0.85);
+}
+
+.swiper-button-prev6,
+.swiper-button-next6 {
+  position: absolute;
+  top: calc(50% - 68px / 2);
+  width: 63px;
+  height: 68px;
+  z-index: 70;
+  cursor: pointer;
+}
+
+.swiper-button-next6 {
+  background: url(../images/next_arr.png) no-repeat;
+  background-size: 100%;
+  right: -5%;
+}
+
+.swiper-button-prev6 {
+  background: url(../images/prev_arr.png) no-repeat;
+  background-size: 100%;
+  left: -5%;
+}
+
+.swiper-pagination6 {
+  display: flex;
+  justify-content: center;
+  padding-top: 1%;
+  padding-bottom: 3%;
+}
+
+.swiper-pagination6 .swiper-pagination-bullet {
+  background: url(../images/dote_1.png) no-repeat;
+  background-size: 100%;
+  width: 23px;
+  height: 23px;
+  opacity: 1;
+  transform: scale(0.8, 0.8);
+  margin: 0;
+}
+
+.swiper-pagination6 .swiper-pagination-bullet-active {
+  background: url(../images/dote_2.png) no-repeat;
+  background-size: 100%;
+  width: 23px;
+  height: 23px;
+  transform: scale(1, 1);
+}
+
+.dec-02 {
+  background: url(../images/dec_02.png) no-repeat;
+  background-position: top right;
+  background-size: 164%;
+  width: 23%;
+  height: 79.2%;
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+}
+
+.dec-03 {
+  background: url(../images/dec_03.png) no-repeat;
+  background-position: top left;
+  background-size: 145%;
+  width: 18%;
+  height: 75%;
+  position: absolute;
+  bottom: 0%;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .LV6 {
+    width: 100%;
+    height: auto;
+    padding-bottom: 0%;
+    background: url(../images/LV6_bg_sp.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+    overflow: hidden;
+  }
+
+  .title04 img {
+    width: 70%;
+    margin: 10% 5% 0 0;
+  }
+
+  .app-banner-container {
+    width: 70%;
+    margin: 8% auto 0 auto;
+  }
+
+  .swiper-button-next6 {
+    top: calc(50% - 43px / 2);
+    right: -15%;
+    width: 40px;
+    height: 43px;
+  }
+
+  .swiper-button-prev6 {
+    top: calc(50% - 43px / 2);
+    left: -15%;
+    width: 40px;
+    height: 43px;
+  }
+
+  .swiper-pagination6 {
+    padding-top: 3%;
+    padding-bottom: 12%;
+  }
+}
+/*--↑角色↑--*/
+
+@media (max-width: 768px) {
+  .sp-d-none {
+    display: none;
+  }
+
+  .pc-d-none {
+    display: block;
+  }
+}
